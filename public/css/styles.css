@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+
+  /* tipografia */
+  --roboto: "Roboto", sans-serif;
+
+  /* tamaños de fuentes */
+  --texto: 12px;
+  --titulares: 24px;
+
+  --price: 18px;
+  --discount: 1rem;
+  --description: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--gris-oscuro);
+}
+
+body {
+  font-family: var(--roboto);
+  font-weight: bold;
+  background-color: var(--gris-claro);
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: var(--texto);
+}
+
+a {
+  text-decoration: none;
+  font-size: var(--texto);
+  color: rgb(65, 62, 62);
+}
+i {
+  color: rgb(65, 62, 62);
+}
+
+h2 {
+  margin: 20px;
+  font-size: var(--titulares);
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--amarillo);
+  padding: 15px;
+}
+
+header ul {
+  margin-bottom: 15px;
+}
+
+header .logoAndSearch {
+  display: flex;
+  gap: 10px;
+}
+
+header form {
+  width: 50%;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  border-radius: 5px;
+}
+
+header form input:focus,
+header form input:active {
+  outline: none;
+}
+header form input {
+  width: 80%;
+  height: 20px;
+  border: none;
+  font-size: 0.7rem;
+  background-color: transparent;
+  padding-left: 5px;
+}
+
+header form button {
+  width: 20%;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+header img {
+  width: 50%;
+}
+
+header nav {
+  display: none;
+}
+
+.subtitle-dues {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  margin: 15px;
+}
+
+.burger-menu {
+  background-color: var(--celeste);
+  width: fit-content;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.burger-menu i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* HEADER END */
+
+/* MAIN */
+
+main {
+  margin: 0 auto;
+  width: 90%;
+  padding: 5px;
+  background-color: var(--gris-claro);
+}
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main article {
+  margin: 10px 0;
+  width: 300px;
+}
+
+main section article i {
+  color: var(--verde);
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+
+.price {
+  font-size: var(--price);
+  display: inline-block;
+  width: 30%;
+}
+
+.discount {
+  font-size: var(--discount);
+  color: var(--verde);
+  display: inline-block;
+  width: 70%;
+  padding-left: 5px;
+}
+
+.priceAndDiscount {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.description {
+  font-size: var(--description);
+  display: none;
+}
+
+.contain-card-items {
+  position: relative;
+  bottom: 4px;
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+  background-color: white;
+}
+
+/* MAIN END */
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 50px 15px 15px 15px;
+  background-color: white;
+}
+
+footer i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--celeste);
+}
+
+footer p {
+  font-size: var(--texto);
+}
+footer section {
+  margin: 20px 20px;
+}
+
+footer .copyright {
+  text-align: left;
+}
+/* FOOTER END */
+
+@media (min-width: 361px) {
+  header {
+    padding: 30px;
+  }
+
+  .description {
+    display: block;
+    margin-top: 15px;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  header img {
+    flex-grow: 1;
+    max-width: 360px;
+  }
+  header .logoAndSearch {
+    width: 60%;
+    margin: 0;
+    display: inline-flex;
+    justify-content: space-around;
+  }
+  header nav ul {
+    display: flex;
+    gap: 10px;
+  }
+  .subtitle-dues {
+    display: inline-flex;
+    width: 30%;
+    vertical-align: bottom;
+  }
+  header form {
+    align-self: center;
+    padding: 5px;
+  }
+
+  main article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: white;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+  main section {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 769px) {
+  header li a {
+    font-size: 1rem;
+  }
+
+  header .subtitle-dues p {
+    font-size: 1rem;
+  }
+  header nav ul {
+    gap: 20px;
+  }
+}
